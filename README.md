@@ -1,4 +1,7 @@
-Simple library that handles the conversion of Postgres HStores to and from Ruby Hashes
+Introduction
+============
+
+Simple library that handles the conversion of Postgres HStores to and from Ruby Hashes.  There is also a serializer that can be used in ActiveRecord models for storing unstructured data.
 
 Independent Usage
 -----------------
