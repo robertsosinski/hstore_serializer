@@ -3,6 +3,19 @@ Introduction
 
 Simple library that handles the conversion of Postgres HStores to and from Ruby Hashes.  There is also a serializer that can be used in ActiveRecord models for storing unstructured data.
 
+Installation
+------------
+
+Create the HStore extension in your Postgres database:
+
+    create extension hstore;
+
+Add the following to your `Gemfile`:
+
+    gem 'hstore_serializer', :git => 'git://github.com/robertsosinski/hstore_serializer.git', :ref => 'v0.1.0'
+    
+Where `ref` can be the version of your choosing.
+
 Independent Usage
 -----------------
 
