@@ -40,7 +40,7 @@ describe HstoreSerializer do
   it "should preserve null values on store" do
     # NULL=>b will be interpreted as the string pair "NULL"=>"b"
 
-    {'a' => nil,nil=>'b'}.to_hstore.should eq(%q(a=>NULL,NULL=>b))
+    {'a' => nil, nil=>'b'}.to_hstore.should eq(%q(a=>NULL,NULL=>b))
   end
 
   it "should preserve null values on load" do
@@ -55,11 +55,11 @@ describe HstoreSerializer do
   end
 
   it "should unquote keys correctly with single quotes" do
-    "\"'a'\"=>\"a\"". from_hstore.should eq({"'a'" => "a"})
-    '\=a=>q=w'.       from_hstore.should eq({"=a"=>"q=w"})
-    '"=a"=>q\=w'.     from_hstore.should eq({"=a"=>"q=w"});
-    '"\"a"=>q>w'.     from_hstore.should eq({"\"a"=>"q>w"});
-    '\"a=>q"w'.       from_hstore.should eq({"\"a"=>"q\"w"})
+    "\"'a'\"=>\"a\"".from_hstore.should eq({"'a'" => "a"})
+    '\=a=>q=w'.from_hstore.should eq({"=a"=>"q=w"})
+    '"=a"=>q\=w'.from_hstore.should eq({"=a"=>"q=w"});
+    '"\"a"=>q>w'.from_hstore.should eq({"\"a"=>"q>w"});
+    '\"a=>q"w'.from_hstore.should eq({"\"a"=>"q\"w"})
   end
 
   it "should quote keys and values correctly with combinations of single and double quotes" do
