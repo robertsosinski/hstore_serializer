@@ -40,7 +40,7 @@ Using With ActiveRecord
     basket = Basket.create(:fruits => {:a => "apple", :b => "banana bread"})
     
     # Find records with the key "a"
-    Basket.where("fruits ? 'a' = ?")
+    Basket.where("fruits ? 'a'")
     
     # Find records where the key "a" is equal to "apple"
     Basket.where("fruits -> 'a' = ?", "apple")
