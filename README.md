@@ -12,7 +12,7 @@ Create the HStore extension in your Postgres database:
 
 Add the following to your `Gemfile`:
 
-    gem 'hstore_serializer', :git => 'git://github.com/robertsosinski/hstore_serializer.git', :ref => 'v0.1.0'
+    gem 'hstore_serializer', :git => 'git://github.com/robertsosinski/hstore_serializer.git', :ref => 'v0.2.0'
     
 Where `ref` can be the version of your choosing.
 
