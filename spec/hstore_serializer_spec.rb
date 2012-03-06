@@ -78,4 +78,9 @@ describe HstoreSerializer do
     ''.from_hstore.should eq({})
     '         '.from_hstore.should eq({})
   end
+  
+  it "should return nil when to_hstore or from_hstore is called on a nil object" do
+    nil.to_hstore.should be_nil
+    nil.from_hstore.should be_nil
+  end
 end
